@@ -1,3 +1,4 @@
 #!/usr/local/bin/node
+import greeter from '..';
 
-console.log('Welcome to the Brain Games!');
+greeter();
