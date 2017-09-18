@@ -1,0 +1,24 @@
+{
+  "name": "hexlet-braingames-by-mput",
+  "version": "0.0.1",
+  "description": "Learning Hexlet.io node.js project implementation.",
+  "main": "brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mput/project-lvl1-s128.git"
+  },
+  "keywords": [
+    "Hexlet",
+    "learningproject",
+    "firstproject"
+  ],
+  "author": "Maxim Putintsev <putintsev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mput/project-lvl1-s128/issues"
+  },
+  "homepage": "https://github.com/mput/project-lvl1-s128#readme"
+}
