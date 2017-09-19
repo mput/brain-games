@@ -8,13 +8,12 @@ engines:
   eslint:
     enabled: true
     config:
-      config: ./.eslintrc.yml
+      config: .eslintrc
   fixme:
     enabled: true
 ratings:
   paths:
   - "**.js"
-  - "**.jsx"
 exclude_paths:
 - dist/
 - node_modules/
