@@ -27,7 +27,7 @@ const gameEngine = (qstnGenFn, rightAnswFn, name) => {
     }
     const question = qstnGenFn();
     const userAnswer = getAnswer(question);
-    const rightAnsw = rightAnswFn(question) 
+    const rightAnsw = rightAnswFn(question);
     if (userAnswer === rightAnsw) {
       console.log('Correct!');
       return runGame(rightAnswer + 1);
@@ -38,6 +38,5 @@ const gameEngine = (qstnGenFn, rightAnswFn, name) => {
   };
   return runGame;
 };
-
 
 export { greeter, getName, gameEngine };
