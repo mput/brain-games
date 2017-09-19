@@ -8,7 +8,7 @@ engines:
   eslint:
     enabled: true
     config:
-      config: .eslintrc.yml
+      config: ./.eslintrc.yml
   fixme:
     enabled: true
 ratings:
