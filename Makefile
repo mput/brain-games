@@ -12,3 +12,6 @@ publish:
 
 lint:
 	npm run eslint .
+
+babel:
+	babel src --out-dir dist --source-maps inline
