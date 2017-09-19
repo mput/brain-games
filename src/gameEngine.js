@@ -26,7 +26,6 @@ const getAnswer = (question) => {
 
 const gameEngine = (CalcQuestion, name) => {
   const runGame = (rightAnswerCount = 0, shouldBeRight = 3) => {
-    console.log(rightAnswerCount);
     if (rightAnswerCount === shouldBeRight) {
       console.log(`${GREEN}Congratulations, ${name}!${NC}`);
       return 'Game over';

@@ -26,6 +26,5 @@ class CalcQuestion {
 
 const rules = 'What is the result of the expression?';
 
-export default () => {
-  return newGame(rules, CalcQuestion);
-};
+export default () => newGame(rules, CalcQuestion);
+
