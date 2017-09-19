@@ -1,4 +1,7 @@
 install:
+	npm install
+
+install-dev:
 	npm install --only=dev
 
 start:
