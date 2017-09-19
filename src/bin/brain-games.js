@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import greeter from '..';
+import game from '..';
+import CalcGame from '../games/calcGame';
 
-greeter();
+game(CalcGame);
