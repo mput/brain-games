@@ -4,6 +4,8 @@
 # Brain Games by mPut
 
 A set of __terminal-based__ mini-games.
+
+All games continuous until you had three right answers in a row.
 ___
 
 ## game-even
@@ -12,4 +14,12 @@ Simple game, where you should answer: is a number even or not.
 
 __Example:__
 [![asciicast](https://asciinema.org/a/TvjoseJsdfQfFQ35egx8z9vge.png)](https://asciinema.org/a/TvjoseJsdfQfFQ35egx8z9vge)
+___
+
+## game-calc
+
+Simple game, where you should be as good as your calculator.
+
+__Example:__
+[![asciicast](https://asciinema.org/a/QEhbep1yhQWFptfjEZjJDy1Q2.png)](https://asciinema.org/a/QEhbep1yhQWFptfjEZjJDy1Q2)
 ___
