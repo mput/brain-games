@@ -7,7 +7,7 @@ export default () => {
     const firstNumber = random(9);
     const secondNumber = random(9);
     const operator = ['+', '-', '*'][random(3) - 1];
-    return [firstNumber, secondNumber, operator]
+    return [firstNumber, secondNumber, operator];
   };
 
   const answer = (question) => {
