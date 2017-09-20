@@ -34,7 +34,7 @@ const newGame = (rules, newQuestion, questionToString, answer) => {
     }
     console.log(`'${userAnswer}' is is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
     console.log(`Let's try again, ${userName}!`);
-    return runGame(rightAnswerCount, shouldBeRight);
+    return runGame(0, shouldBeRight);
   };
   return runGame(0, 3);
 };

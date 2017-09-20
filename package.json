@@ -1,6 +1,6 @@
 {
   "name": "hexlet-braingames-by-mput",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Learning Hexlet.io node.js project implementation.",
   "devDependencies": {
     "babel-cli": "^6.26.0",
