@@ -23,3 +23,10 @@ Simple game, where you should be as good as your calculator.
 __Example:__
 [![asciicast](https://asciinema.org/a/QEhbep1yhQWFptfjEZjJDy1Q2.png)](https://asciinema.org/a/QEhbep1yhQWFptfjEZjJDy1Q2)
 ___
+
+## game-gcd
+
+Simple game, where you should find greatest common divisor of given numbers.
+[![asciicast](https://asciinema.org/a/lDk15cGjZQMX6P6UtieKfaUB8.png)](https://asciinema.org/a/lDk15cGjZQMX6P6UtieKfaUB8)
+
+___
