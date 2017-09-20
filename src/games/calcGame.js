@@ -1,12 +1,12 @@
 import newGame from '..';
-import random from '../utils';
+import { randomInt } from '../utils';
 
 export default () => {
   const rules = 'What is the result of the expression?';
   const newQuestion = () => {
-    const firstNumber = random(9);
-    const secondNumber = random(9);
-    const operator = ['+', '-', '*'][random(3) - 1];
+    const firstNumber = randomInt(9);
+    const secondNumber = randomInt(9);
+    const operator = ['+', '-', '*'][randomInt(3) - 1];
     return [firstNumber, secondNumber, operator];
   };
 
