@@ -1,6 +1,6 @@
 {
   "name": "hexlet-braingames-by-mput",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Learning Hexlet.io node.js project implementation.",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,7 +26,8 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "repository": {
     "type": "git",
