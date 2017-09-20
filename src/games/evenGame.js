@@ -1,18 +1,10 @@
-import random from '../random';
 import newGame from '..';
+import random from '../utils';
 
-class CalcQuestion {
-  constructor() {
-    this.Number = random(50);
-  }
-  get question() {
-    return this.Number;
-  }
-  get answer() {
-    return (this.Number % 2 === 0) ? 'yes' : 'no';
-  }
-}
-
-const rules = 'Answer "yes" if number even otherwise answer "no"';
-
-export default () => newGame(rules, CalcQuestion);
+export default () => {
+  const rules = 'Answer "yes" if number even otherwise answer "no"';
+  const newQuestion = () => random(50);
+  const answer = question => ((question % 2 === 0) ? 'yes' : 'no');
+  const questionToString = question => String(question);
+  return newGame(rules, newQuestion, questionToString, answer);
+};
