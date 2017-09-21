@@ -1,10 +1,13 @@
+import { cons } from 'hexlet-pairs';
 import newGame from '..';
 import { randomInt } from '../utils';
 
 export default () => {
-  const rules = 'Answer "yes" if number even otherwise answer "no"';
-  const newQuestion = () => randomInt(50);
-  const answer = question => ((question % 2 === 0) ? 'yes' : 'no');
-  const questionToString = question => String(question);
-  return newGame(rules, newQuestion, questionToString, answer);
+  const description = 'Answer "yes" if number even otherwise answer "no"';
+  const queAndAnsw = () => {
+    const question = randomInt(50);
+    const answer = ((question % 2 === 0) ? 'yes' : 'no');
+    return cons(String(question), answer);
+  };
+  return newGame(description, queAndAnsw);
 };
