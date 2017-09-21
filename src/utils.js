@@ -17,5 +17,5 @@ const findGcd = (a, b) => {
   return iterGcd(biggestNum);
 };
 
-export { randomInt, findGcd };
+export default randomInt;
 
