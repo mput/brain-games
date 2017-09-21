@@ -1,27 +1,27 @@
+import { cons } from 'hexlet-pairs';
 import newGame from '..';
 import { randomInt } from '../utils';
 
 export default () => {
-  const rules = 'What is the result of the expression?';
-  const newQuestion = () => {
+  const description = 'What is the result of the expression?';
+  const queAndAnsw = () => {
     const firstNumber = randomInt(9);
     const secondNumber = randomInt(9);
     const operator = ['+', '-', '*'][randomInt(3) - 1];
-    return [firstNumber, secondNumber, operator];
-  };
+    const question = `${firstNumber} ${operator} ${secondNumber}`;
 
-  const answer = (question) => {
-    switch (question[2]) {
-      case '+':
-        return String(question[0] + question[1]);
-      case '-':
-        return String(question[0] - question[1]);
-      case '*':
-        return String(question[0] * question[1]);
-      default:
-        return NaN;
-    }
+    const findAnswer = (sign) => {
+      switch (sign) {
+        case '+':
+          return firstNumber + secondNumber;
+        case '-':
+          return firstNumber - secondNumber;
+        default:
+          return firstNumber * secondNumber;
+      }
+    };
+    const answer = String(findAnswer(operator));
+    return cons(question, answer);
   };
-  const questionToString = question => `${question[0]} ${question[2]} ${question[1]}`;
-  return newGame(rules, newQuestion, questionToString, answer);
+  return newGame(description, queAndAnsw);
 };
