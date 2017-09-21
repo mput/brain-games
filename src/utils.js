@@ -4,18 +4,5 @@ const randomInt = (max) => {
   return randomInteger;
 };
 
-const findGcd = (a, b) => {
-  const iterGcd = (curNum) => {
-    if (curNum === 1) {
-      return curNum;
-    } else if ((a % curNum === 0) && (b % curNum === 0)) {
-      return curNum;
-    }
-    return iterGcd(curNum - 1);
-  };
-  const biggestNum = (a > b) ? a : b;
-  return iterGcd(biggestNum);
-};
-
 export default randomInt;
 
