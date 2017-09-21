@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import newGame from '..';
 import randomInt from '../utils';
 
-const description = 'Answer "yes" if number even otherwise answer "no"';
+const description = 'Balance the given number.';
 
 const sortString = string => string.split('').sort().join('');
 
@@ -32,37 +32,10 @@ const makeBalance = (numberStr) => {
   return sortString(balanced);
 };
 
-console.log(makeBalance('4181'));
-
-
 const getQueAndAnsw = () => {
-  const question = String(randomInt(9999));
+  const question = String(randomInt(99));
   const answer = makeBalance(question);
   return cons(question, answer);
 };
 
 export default () => newGame(description, getQueAndAnsw);
-
-
-// for (let i = 0 i<numberStr.length)
-/*
-{
-  if (curCharIndex === string.length && wasMoved === false) {
-    return string;
-  } else if (curCharIndex === string.length) {
-    return iterBalance(string, 1, false);
-  }
-  const curNumber = Number(string.charAt(curCharIndex));
-  const prevNumber = Number(string.charAt(curCharIndex - 1));
-  console.log('curNumber = ', curNumber, ' prevNumber = ', prevNumber, 'difff', curNumber - prevNumber);
-  if (curNumber - prevNumber > 1) {
-    const newString = string.slice(0, curCharIndex - 1) +
-      String(prevNumber + 1) + String(curNumber - 1) +
-      string.slice(curCharIndex + 1, string.length);
-    console.log(newString)
-    return iterBalance(newString, 1, true);
-  }
-  return iterBalance(string, curCharIndex + 1, false);
-};
-
-*/
