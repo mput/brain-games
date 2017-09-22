@@ -12,7 +12,7 @@ const findGcd = (a, b) => {
     }
     return iterGcd(curNum - 1);
   };
-  const biggestNum = (a > b) ? a : b;
+  const biggestNum = (a < b) ? a : b;
   return iterGcd(biggestNum);
 };
 
