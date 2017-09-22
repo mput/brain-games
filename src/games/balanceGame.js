@@ -4,32 +4,19 @@ import randomInt from '../utils';
 
 const description = 'Balance the given number.';
 
-const sortString = string => string.split('').sort().join('');
+const sumOfChar = string => string.split('').reduce(((acc, x) => acc + Number(x)), 0);
 
 const makeBalance = (numberStr) => {
-  const iterBalance = (firstNumber, tailStr, curCharIndex, wasMoved) => {
-    if (curCharIndex === tailStr.length) {
-      if (wasMoved) {
-        return iterBalance(firstNumber, tailStr, 0, false);
-      }
-      return `${firstNumber}${tailStr}`;
+  const charsSum = sumOfChar(numberStr);
+  const iterBalance = (sum, charsCount, resultString) => {
+    if (charsCount === 0) {
+      return resultString;
     }
-
-    const curChar = Number(tailStr.charAt(curCharIndex));
-    const difference = curChar - firstNumber;
-    if (Math.abs(difference) > 1) {
-      const changer = difference > 0 ? 1 : -1;
-      const newFirstChar = firstNumber + changer;
-      const newTailString = tailStr.slice(0, curCharIndex) + String(curChar - changer) +
-        tailStr.slice(curCharIndex + 1, tailStr.length);
-      return iterBalance(newFirstChar, newTailString, 0, true);
-    }
-    return iterBalance(firstNumber, tailStr, curCharIndex + 1, false);
+    const newElement = Math.floor(sum / charsCount);
+    const newResultString = resultString + String(newElement);
+    return iterBalance(sum - newElement, charsCount - 1, newResultString)
   };
-  const firstNumber = Number(numberStr.charAt(0));
-  const tailString = numberStr.slice(1);
-  const balanced = iterBalance(firstNumber, tailString, 0, false);
-  return sortString(balanced);
+  return iterBalance(charsSum, numberStr.length, '');
 };
 
 const getQueAndAnsw = () => {
