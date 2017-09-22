@@ -1,4 +1,4 @@
-import { cons, cdr, car } from 'hexlet-pairs';
+import { cons } from 'hexlet-pairs';
 import newGame from '..';
 import randomInt from '../utils';
 
