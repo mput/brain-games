@@ -25,7 +25,7 @@ export default (description, getQueAndAnsw) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(description);
-  const isGameWin = runGame(getQueAndAnsw)
+  const isGameWin = runGame(getQueAndAnsw);
   const byeMessage = isGameWin ?
     `Congratulations, ${userName}!` :
     `Let's try again, ${userName}!`;
