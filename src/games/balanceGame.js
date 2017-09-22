@@ -3,20 +3,19 @@ import newGame from '..';
 import randomInt from '../utils';
 
 const description = 'Balance the given number.';
-
-const sumOfChar = string => string.split('').reduce(((acc, x) => acc + Number(x)), 0);
+const getSumOfChar = string => string.split('').reduce(((acc, x) => acc + Number(x)), 0);
 
 const makeBalance = (numberStr) => {
-  const charsSum = sumOfChar(numberStr);
+  const sumOfChar = getSumOfChar(numberStr);
   const iterBalance = (sum, charsCount, resultString) => {
     if (charsCount === 0) {
       return resultString;
     }
     const newElement = Math.floor(sum / charsCount);
     const newResultString = resultString + String(newElement);
-    return iterBalance(sum - newElement, charsCount - 1, newResultString)
+    return iterBalance(sum - newElement, charsCount - 1, newResultString);
   };
-  return iterBalance(charsSum, numberStr.length, '');
+  return iterBalance(sumOfChar, numberStr.length, '');
 };
 
 const getQueAndAnsw = () => {
