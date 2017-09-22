@@ -1,11 +1,11 @@
 {
   "name": "hexlet-braingames-by-mput",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "description": "Learning Hexlet.io node.js project implementation.",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "beabel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
