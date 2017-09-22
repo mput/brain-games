@@ -3,25 +3,30 @@ import newGame from '..';
 import randomInt from '../utils';
 
 const description = 'Balance the given number.';
-const getSumOfChar = string => string.split('').reduce(((acc, x) => acc + Number(x)), 0);
 
-const makeBalance = (numberStr) => {
-  const sumOfChar = getSumOfChar(numberStr);
-  const iterBalance = (sum, charsCount, resultString) => {
-    if (charsCount === 0) {
-      return resultString;
+const getSumOfDigits = (number) => {
+  const numberStr = String(number);
+  return numberStr.split('').reduce(((acc, x) => acc + Number(x)), 0);
+};
+
+const makeBalance = (number) => {
+  const sumOfDigits = getSumOfDigits(number);
+  const digitsCount = String(number).length;
+  const iterBalance = (sum, count, resultStr) => {
+    if (count === 0) {
+      return Number(resultStr);
     }
-    const newElement = Math.floor(sum / charsCount);
-    const newResultString = resultString + String(newElement);
-    return iterBalance(sum - newElement, charsCount - 1, newResultString);
+    const newDigit = Math.floor(sum / count);
+    const newResultStr = resultStr + String(newDigit);
+    return iterBalance(sum - newDigit, count - 1, newResultStr);
   };
-  return iterBalance(sumOfChar, numberStr.length, '');
+  return iterBalance(sumOfDigits, digitsCount, '');
 };
 
 const getQueAndAnsw = () => {
-  const question = String(randomInt(99));
+  const question = randomInt(99);
   const answer = makeBalance(question);
-  return cons(question, answer);
+  return cons(String(question), String(answer));
 };
 
 export default () => newGame(description, getQueAndAnsw);
